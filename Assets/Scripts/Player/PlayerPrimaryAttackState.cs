@@ -16,6 +16,8 @@ public class PlayerPrimaryAttackState : PlayerState
     {
         base.Enter();
 
+        xInput = 0;  // 공격방향을 고정한다
+
         if (comboCounter > 2 || Time.time >= lastTimeAttacked + comboWindow) {
             comboCounter = 0;
         }
@@ -29,7 +31,7 @@ public class PlayerPrimaryAttackState : PlayerState
         }
 
         player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
-
+        
         stateTimer = 0.1f;
     }
 
@@ -48,7 +50,7 @@ public class PlayerPrimaryAttackState : PlayerState
         base.Update();
 
         if (stateTimer < 0) {
-            player.ZeroVelocity();
+            player.SetZeroVelocity();
         }
         
         if (triggerCalled) {
