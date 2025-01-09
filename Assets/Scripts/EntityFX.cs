@@ -5,7 +5,7 @@ using UnityEngine;
 public class EntityFX : MonoBehaviour
 {
     private SpriteRenderer sr;
-
+    
     [Header("Flash FX")]
     [SerializeField] private Material hitMat;
     [SerializeField] private float flashDuration;
