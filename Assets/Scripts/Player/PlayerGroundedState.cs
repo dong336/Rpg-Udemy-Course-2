@@ -22,6 +22,10 @@ public class PlayerGroundedState : PlayerState
     {
         base.Update();
 
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            stateMachine.ChangeState(player.counterAttackState);
+        }
+
         if (Input.GetKey(KeyCode.Z)) {
             stateMachine.ChangeState(player.primaryAttackState);
         }

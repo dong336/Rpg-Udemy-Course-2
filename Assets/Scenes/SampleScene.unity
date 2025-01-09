@@ -2902,6 +2902,7 @@ MonoBehaviour:
   - {x: 3, y: 1}
   - {x: 1, y: 2}
   - {x: 4, y: 1}
+  counterAttackDuration: 0.3
   moveSpeed: 10
   jumpForce: 12
   dashCooldown: 1
