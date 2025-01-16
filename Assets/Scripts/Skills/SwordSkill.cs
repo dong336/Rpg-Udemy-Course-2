@@ -16,9 +16,9 @@ public class SwordSkill : Skill
     [SerializeField] private float spaceBetweenDots;
     [SerializeField] private GameObject dotPrefab;
     [SerializeField] private Transform dotsParent;
-
+    
     private GameObject[] dots;
-
+    
     protected override void Start() {
         base.Start();
 

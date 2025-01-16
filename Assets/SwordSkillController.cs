@@ -28,4 +28,9 @@ public class SwordSkillController : MonoBehaviour
         rb.velocity = _dir;
         rb.gravityScale = _gravityScale;
     }
+
+    public void Update()
+    {
+        transform.right = rb.velocity;
+    }
 }
